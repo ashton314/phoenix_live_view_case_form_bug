@@ -6,7 +6,6 @@ config :case_form_bug, CaseFormBug.Repo,
   password: "postgres",
   database: "case_form_bug_dev",
   hostname: "localhost",
-  port: 5454,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

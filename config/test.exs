@@ -6,7 +6,6 @@ config :case_form_bug, CaseFormBug.Repo,
   password: "postgres",
   database: "case_form_bug_test",
   hostname: "localhost",
-  port: 5454,
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
