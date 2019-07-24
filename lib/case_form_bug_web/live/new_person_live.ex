@@ -7,12 +7,15 @@ defmodule CaseFormBugWeb.NewPersonLive do
   end
 
   def mount(%{} = _params, socket) do
-    {:ok, assign(socket, :changeset, CaseFormBug.Example.change_person(%Person{}))}
+    {:ok,
+     assign(socket, show_color: true, changeset: CaseFormBug.Example.change_person(%Person{}))}
+  end
+
+  def handle_event("toggle", _params, socket) do
+    {:noreply, update(socket, :show_color, fn i -> !i end)}
   end
 
   def handle_event("validate", %{"person" => params}, socket) do
-    IO.inspect(params, label: :params)
-
     changeset =
       %Person{}
       |> CaseFormBug.Example.change_person(params)

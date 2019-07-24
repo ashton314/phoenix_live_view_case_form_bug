@@ -18,8 +18,8 @@
       <td><%= person.favorite_color %></td>
 
       <td>
-        <%= link "Show", to: Routes.person_path(@conn, :show, person) %>
-        <%= link "Edit", to: Routes.person_path(@conn, :edit, person) %>
+        <%= link "Show", to: Routes.person_path(@conn, :show, person) %> &nbsp;|&nbsp;
+        <%= link "Edit", to: Routes.person_path(@conn, :edit, person) %> &nbsp;|&nbsp;
         <%= link "Delete", to: Routes.person_path(@conn, :delete, person), method: :delete, data: [confirm: "Are you sure?"] %>
       </td>
     </tr>
@@ -27,4 +27,4 @@
   </tbody>
 </table>
 
-<span><%= link "New Person", to: Routes.person_path(@conn, :new) %></span>
+<span><%= link "New Person", to: Routes.live_path(CaseFormBugWeb.Endpoint, CaseFormBugWeb.NewPersonLive) %></span>
