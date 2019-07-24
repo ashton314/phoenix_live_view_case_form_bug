@@ -1,0 +1,23 @@
+<h1>Show Person</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @person.name %>
+  </li>
+
+  <li>
+    <strong>Age:</strong>
+    <%= @person.age %>
+  </li>
+
+  <li>
+    <strong>Favorite color:</strong>
+    <%= @person.favorite_color %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.person_path(@conn, :edit, @person) %></span>
+<span><%= link "Back", to: Routes.person_path(@conn, :index) %></span>

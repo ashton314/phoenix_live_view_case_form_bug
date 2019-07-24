@@ -1,0 +1,22 @@
+<h1>New Person</h1>
+
+<%= f = form_for @changeset, "#", [phx_change: :validate, phx_submit: :save] %>
+
+  <%= label f, :name %>
+  <%= text_input f, :name %>
+  <%= error_tag f, :name %>
+
+  <%= label f, :age %>
+  <%= number_input f, :age %>
+  <%= error_tag f, :age %>
+
+  <%= label f, :favorite_color %>
+  <%= text_input f, :favorite_color %>
+  <%= error_tag f, :favorite_color %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+</form>
+
+<span><%= link "Back", to: Routes.person_path(@socket, :index) %></span>
