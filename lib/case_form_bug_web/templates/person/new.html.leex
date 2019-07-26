@@ -16,6 +16,8 @@
 
 State is: <%= @show_color %><br/>
 
+<!-- Uncomment this and remove the `if` block to see the error. -->
+
 <%#= case @show_color do %>
     <%# true -> %>
         <%#= label f, :favorite_color %>
@@ -24,6 +26,8 @@ State is: <%= @show_color %><br/>
     <%# false -> %>
 <!-- Nothing to see here -->
 <%# end %>
+
+(This should work just fine. Visit <pre>templates/person/new.html.leex</pre> and see the comment in that file.)
 
 <%= if @show_color do %>
     <%= label f, :favorite_color %>
