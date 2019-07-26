@@ -16,25 +16,22 @@
 
 State is: <%= @show_color %><br/>
 
-<!-- Comment this out and take out the `if` block down lower to observe the bug. -->
-<!-- <%= case if @show_color, do: :one, else: :two do %>
-     <%= :one -> %>
-     <%= label f, :favorite_color %>
-     <%= text_input f, :favorite_color %>
-     <%= error_tag f, :favorite_color %>
-     <%= :two -> %>
-     Nothing to see here
-     <% end %> -->
+<%#= case @show_color do %>
+    <%# true -> %>
+        <%#= label f, :favorite_color %>
+        <%#= text_input f, :favorite_color %>
+        <%#= error_tag f, :favorite_color %>
+    <%# false -> %>
+<!-- Nothing to see here -->
+<%# end %>
 
-<hr/>
-
-  <%= if @show_color do %>
-      <%= label f, :favorite_color %>
-      <%= text_input f, :favorite_color %>
-      <%= error_tag f, :favorite_color %>
-  <%= else %>
-          Nothing to see here
-  <% end %>
+<%= if @show_color do %>
+    <%= label f, :favorite_color %>
+    <%= text_input f, :favorite_color %>
+    <%= error_tag f, :favorite_color %>
+<% else %>
+    Nothing to see here
+<% end %>
   
 <hr/>
 
