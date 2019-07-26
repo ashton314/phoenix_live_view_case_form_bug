@@ -1,6 +1,6 @@
 # CaseFormBug
 
-Using `case` inside of a LiveView form doesn't seem to work.
+Using `case` inside of a LiveView form doesn't seem to work. Fire up the server and go to http://127.0.0.1:4000/people/new
 
 See the file `lib/case_form_bug_web/templates/person/new.html.leex`. This works:
 
